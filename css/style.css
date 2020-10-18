@@ -143,11 +143,12 @@ body {
 
 .contacts > .item:not(:last-child) {
   padding-left: 0px;
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 .contacts .link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -160,18 +161,24 @@ body {
 }
 
 .contacts .link:hover,
-.contacts .link:focus {
+.contacts .link:focus,
+.contacts .icon:hover,
+.contacts .icon:focus {
+  --color4: var(--accent-color);
   color: var(--accent-color);
 }
-
+.contacts .icon {
+  margin-right: 10px;
+}
 /* Блок герой */
 .hero {
   padding: 200px 0;
   margin-right: auto;
   margin-left: auto;
-
   max-width: 1600px;
+
   background-color: var(--footer-hero-bg-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero.jpg);
 }
 
 .hero > .container {
@@ -199,6 +206,7 @@ body {
   padding: 10px 32px;
   border: none;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
@@ -219,7 +227,7 @@ body {
 /* Блок Наши приимущества */
 .advantages {
   padding-top: 94px;
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 }
 
 .advantages > .container > .list {
@@ -249,9 +257,20 @@ body {
   margin-right: 30px;
 }
 
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  background-color: var(--secondary-bg-color);
+}
+
 /* Блок Work  */
 .work {
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 }
 
 .work .titel {
@@ -294,6 +313,9 @@ body {
 
 .card {
   background-color: var(--primary-bg-color);
+  padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .card > .titel {
@@ -307,7 +329,7 @@ body {
 }
 
 .card > .text {
-  padding-bottom: 30px;
+  padding-bottom: 16px;
   margin: 0;
 
   font-size: 16px;
@@ -317,6 +339,30 @@ body {
 
 .card > img {
   display: block;
+}
+
+.card > .list {
+  justify-content: center;
+}
+
+.team .link {
+  height: 44px;
+  width: 44px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.team .item {
+}
+.team .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team .link:hover,
+.team .link:focus {
+  background-color: var(--accent-color);
+  --color3: var(--primary-bg-color);
 }
 
 /* Футер */
